@@ -77,6 +77,31 @@ var swiper = new Swiper(".client-swiper", {
     },
 });
 
+
+//Responsive navigation menu toogle
+const menuBtn = document.querySelector(".nav-menu-btn");
+const closeBtn = document.querySelector(".nav-close-btn");
+const navigation = document.querySelector(".navigation");
+const navItems = document.querySelector(".nav-items a");
+
+menuBtn.addEventListener("click", () => {
+    navigation.classList.add("active");
+});
+
+closeBtn.addEventListener("click", () => {
+    navigation.classList.remove("active");
+});
+
+navItems.forEach((navItem) =>{
+    navItem.addEventListener("click", () => {
+        navigation.classList.remove("active");
+    });
+});
+
+
+
+
+
 //Scroll to Top button
 const scrollTopBtn = document.querySelector(".scrollToTop-btn");
 
@@ -134,26 +159,6 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
-//Responsive navigation menu toogle
-const menuBtn = document.querySelector(".nav-menu-btn");
-const closeBtn = document.querySelector(".nav-close-btn");
-const navigation = document.querySelector(".navigation");
-const navItems = document.querySelector(".nav-items a");
-
-menuBtn.addEventListener("click", () => {
-    navigation.classList.add("active");
-});
-
-closeBtn.addEventListener("click", () => {
-    navigation.classList.remove("active");
-});
-
-navItems.forEach((navItem) =>{
-    navItem.addEventListener("click", () => {
-        navigation.classList.remove("active");
-    });
-});
 
 
 
