@@ -70,6 +70,20 @@ var swiper = new Swiper(".client-swiper", {
 });
 
 
+//Scroll to Top button
+const scrollTopBtn = document.querySelector(".scrollToTop-btn");
+
+window.addEventListener("scroll", function(){
+    scrollTopBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+scrollTopBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
+
+
 //Responsive navigation menu toogle
 const menuBtn = document.querySelector(".nav-menu-btn");
 const closeBtn = document.querySelector(".nav-close-btn");
@@ -93,18 +107,6 @@ navItems.forEach((navItem) =>{
 
 
 
-
-//Scroll to Top button
-const scrollTopBtn = document.querySelector(".scrollToTop-btn");
-
-window.addEventListener("scroll", function(){
-    scrollTopBtn.classList.toggle("active", window.scrollY > 500);
-});
-
-scrollTopBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-});
 
 
 
