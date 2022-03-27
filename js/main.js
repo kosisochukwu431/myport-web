@@ -4,13 +4,6 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-
-
-
-
-
-
-
 //Services section - Modal
 const serviceModals = document.querySelectorAll(".service-modal");
 const learnmoreBtns = document.querySelectorAll(".learn-more-btn");
@@ -33,7 +26,6 @@ modalCloseBtns.forEach((modalCloseBtn) => {
         });
     });
 });
-
 
 
 //Portfolio section - Modal
