@@ -4,8 +4,7 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-//Scroll reveal animations
-//Common reveal options to create reveal animations
+
 
 
 
@@ -113,7 +112,7 @@ const savedIcon = localStorage.getItem("saved-icon");
 if (savedTheme){
     document.body.classList[savedTheme === "dark" ? "add" : "remove"]("dark-theme");
     themeBtn.classList[savedIcon === "sun" ? "add" : "remove"](sun);
-};
+}
 
 //Navigation menu items active on page scroll
 window.addEventListener("scroll", () => {
@@ -160,7 +159,8 @@ navItems.forEach((navItem) =>{
 
 
 
-
+//Scroll reveal animations
+//Common reveal options to create reveal animations
 ScrollReveal({
     //reset: true,
     distance: '60px',
